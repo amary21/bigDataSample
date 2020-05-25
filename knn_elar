@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Mar  5 17:17:55 2020
+
+@author: amary
+"""
+
+from sklearn.preprocessing import LabelEncoder
+from pandas import DataFrame
+from sklearn import preprocessing
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import classification_report, confusion_matrix
+import pandas as pd
+import numpy as np
+
+
+data = pd.read_csv("german_credit_data.csv")
+le = preprocessing.LabelEncoder()
+data['Sex']= le.fit_transform(data['Sex'])
+data['Housing']=le.fit_transform(data['Housing'])
+x=data.drop(["Purpose","Checking account","Saving accounts","Unnamed: 0"],axis = 1)
+
+y=data["Purpose"]
+x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.20)
+
+scaler= StandardScaler()
+scaler.fit(x_train)
+x_train=scaler.transform(x_train)
+x_test=scaler.transform(x_test)
+knn=KNeighborsClassifier(n_neighbors=8)
+knn.fit(x_train,y_train)
+
+
+KNeighborsClassifier(algorithm='auto', leaf_size=30,metric='mahalanobis',metric_params=None,n_jobs=1,n_neighbors=8,p=2,weights='uniform')
+y_pred=knn.predict(x_test)
+y_pred
+knn.predict_proba(x_test)
+#print(confusion_matrix(y_test,y_pred))
+#print(classification_report(y_test,y_pred))

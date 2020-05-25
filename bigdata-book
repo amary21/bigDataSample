@@ -1,0 +1,102 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr 10 00:45:54 2020
+
+@author: amary
+@Email: taufik.amary@gmail.com
+"""
+
+#n = 123
+#alas = 30
+#tinggi = 18
+#
+#luas = alas * tinggi /2
+#totalLuas = n * luas
+#
+#print('Luas Total: ', totalLuas,' satuan luas')
+
+
+#n = 4
+#pKamar = 4 * 100
+#lKamar = 4 * 100
+#
+#pKeramik = 30
+#lKeramik = 40
+#
+#luasTotalKamar = n * pKamar * lKamar
+#luasKeramik = pKeramik * lKeramik
+#
+#jumKeramik = luasTotalKamar // luasKeramik
+#
+#isiBoxKeramik = 5
+#jumlahBoxKeramik = round(jumKeramik / isiBoxKeramik)
+#
+#jumKeramikCadangan = round(jumKeramik * 10/100)
+#jumlahBoxCadangan = round(jumKeramikCadangan / isiBoxKeramik)
+#totalBoxSeluruh = jumlahBoxCadangan + jumlahBoxKeramik
+#
+#hargaBox = 125000
+#totalHargaBox = hargaBox * totalBoxSeluruh
+#
+#print('jumlah keramik', jumKeramik)
+#print('jumlah cadangan keramik', jumKeramikCadangan)
+#print('Jumlah box:', jumlahBoxKeramik )
+#print('Jumlah box:', jumlahBoxCadangan )
+#print('total box keseluruhan:', totalBoxSeluruh)
+#print('harga total seluruh bocx: Rp.',totalHargaBox)
+
+
+#jarak = 128783082
+#
+#a = jarak // 100000
+#b = jarak % 100000
+#c = b // 100
+#d = b % 100
+#
+#print(jarak,'cm = ', a, 'km + ',c,'m +', d,'cm')
+
+
+
+#uangAwal = 32892700
+#
+#a = uangAwal // 100000
+#b = (uangAwal - (a * 100000)) // 50000
+#c = (uangAwal - (a * 100000) - (b * 50000)) // 10000
+#d = (uangAwal - (a * 100000) - (b * 50000) - (c * 10000)) // 5000
+#f = (uangAwal - (a * 100000) - (b * 50000) - (c * 10000) - (d * 5000)) // 1000
+#g = (uangAwal - (a * 100000) - (b * 50000) - (c * 10000) - (d * 5000) - (f * 1000)) // 500
+#h = (uangAwal - (a * 100000) - (b * 50000) - (c * 10000) - (d * 5000) - (f * 1000) - (g * 500)) // 100
+#
+#print('uang penukaran :', uangAwal)
+#print('uang Rp. 100.000 :',a)
+#print('uang Rp. 50.000 :',b)
+#print('uang Rp. 10.000 :',c)
+#print('uang Rp. 5.000 :',d)
+#print('uang Rp. 1.000 :',f)
+#print('uang Rp. 500 :',g)
+#print('uang Rp. 100 :',h)
+
+
+phi = 3.14
+print('input jari - jari:')
+jari = float(input())
+
+luas = phi * (jari ** 2)
+print('luas :',luas)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

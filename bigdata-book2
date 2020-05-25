@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr 10 09:32:43 2020
+
+@author: amary
+@Email: taufik.amary@gmail.com
+"""
+bIndonesia = False
+bIpa = False
+bMatematika = False
+
+print('Masukan nilai Bhs Indonesia:')
+nIndonesia = int(input())
+print('Masukan nilai IPA:')
+nIpa = int(input())
+print('Masukan nilai Matematika:')
+nMatematika = int(input())
+
+if nIndonesia >= 0 and nIndonesia <= 100 and nIpa >= 0 and nIpa <= 100 and nMatematika >= 0 and nMatematika <= 100:
+    if nIndonesia < 60:
+        bIndonesia = True
+        hasil = 'TIDAK LULUS'
+    elif bIpa < 60:
+        bIpa = True
+        hasil = 'TIDAK LULUS'
+    elif bMatematika < 70:
+        bMatematika = True
+        hasil = 'TIDAK LULUS'
+    else:
+        hasil = 'LULUS'
+    
+    print('Status Kelulusan:', hasil)
+    if bIndonesia:
+        print('Nilai bahasa Indonesia kurang dari 60')
+        
+    if bIpa:
+        print('Nilai bahasa IPA kurang dari 60')
+        
+    if bMatematika:
+        print('Nilai bahasa Matematika kurang dari 70')
+
+else:
+    print('Input Error')
+    
